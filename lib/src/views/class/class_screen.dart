@@ -5,6 +5,7 @@ import 'package:school_management/src/utils/values.dart';
 
 import '../../utils/color.dart';
 import '../../utils/spacing.dart';
+import '../../widgets/widget_appbar.dart';
 
 class ClassScreen extends StatefulWidget {
   const ClassScreen({Key? key}) : super(key: key);
@@ -20,32 +21,7 @@ class _ClassScreenState extends State<ClassScreen> {
       backgroundColor: AppColors.white,
       body: Column(
         children: [
-          Container(
-            padding: EdgeInsets.only(top: Spacing.viewPadding.top + 10, bottom: 10, right: 14, left: 14),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: SvgPicture.asset(
-                      'assets/icons/ic_back.svg',
-                      height: 20,
-                      width: 20,
-                    )),
-                Text(
-                  "Quản lý lớp học",
-                  style: AppStyle.DEFAULT_18_BOLD,
-                ),
-                const SizedBox(
-                  height: 20,
-                  width: 20,
-                )
-              ],
-            ),
-          )
+          widget_appbar(text: "Quản lý lớp học",)
         ],
       ),
     );
