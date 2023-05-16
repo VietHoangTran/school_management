@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Spacing {
-  static final MediaQueryData mediaQueryData =
-  MediaQueryData.fromWindow(WidgetsBinding.instance.window);
+  static final MediaQueryData mediaQueryData = MediaQueryData.fromWindow(WidgetsBinding.instance.window);
   static final EdgeInsets viewPadding = mediaQueryData.viewPadding;
   static final double paddingHorizontal = 14;
   static final double heightHeader = 55;
