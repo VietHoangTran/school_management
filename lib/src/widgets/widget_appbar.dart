@@ -6,10 +6,7 @@ import '../utils/spacing.dart';
 
 class widget_appbar extends StatelessWidget {
   String text;
-  widget_appbar({
-    super.key,
-    required this.text
-  });
+  widget_appbar({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +27,7 @@ class widget_appbar extends StatelessWidget {
               )),
           Text(
             text,
-            style: AppStyle.DEFAULT_18_BOLD,
+            style: AppStyle.DEFAULT_20_BOLD,
           ),
           const SizedBox(
             height: 20,
