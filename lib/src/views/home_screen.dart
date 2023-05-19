@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:school_management/src/utils/styles.dart';
 import 'package:school_management/src/utils/values.dart';
+import 'package:school_management/src/views/teacher/teacher_screen.dart';
 
 import '../utils/color.dart';
 import '../widgets/widget_home.dart';
@@ -25,7 +25,14 @@ class _HomeScreenState extends State<HomeScreen> {
           Navigator.push(context, MaterialPageRoute(builder: (context) => const ClassScreen()));
         }
       },
-      {"icon": "assets/icons/ic_teacher.svg", "name": "Danh sách giáo viên", "click": () {}},
+      {
+        "icon": "assets/icons/ic_teacher.svg",
+        "name": "Danh sách giáo viên",
+        "click": () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const TeacherScreen()));
+        }
+      },
+      {"icon": "assets/icons/ic_hs.svg", "name": "Danh sách học sinh", "click": () {}},
       {"icon": "assets/icons/ic_thuchi.svg", "name": "Quản lý thu chi", "click": () {}},
       {"icon": "assets/icons/ic_suatan.svg", "name": "Quản lý xuất ăn", "click": () {}},
       {"icon": "assets/icons/ic_diemdanh.svg", "name": "Quản lý điểm danh", "click": () {}},
@@ -64,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
           AppValue.vSpace(AppValue.heights * 0.177 / 2 + 20),
           Expanded(
             child: GridView.builder(
-                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 18),
+                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 18),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   // mainAxisExtent: AppValue.heights*0.18,
                   crossAxisSpacing: 14,
@@ -79,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onClick: listItem[index]['click'],
                   );
                 }),
-          )
+          ),
         ],
       ),
     );
