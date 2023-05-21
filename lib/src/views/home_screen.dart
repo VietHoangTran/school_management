@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:school_management/src/utils/values.dart';
+import 'package:school_management/src/views/event/event_screen.dart';
+import 'package:school_management/src/views/expenditure/expenditure_screen.dart';
+import 'package:school_management/src/views/student/student_screen.dart';
 import 'package:school_management/src/views/teacher/teacher_screen.dart';
 
 import '../utils/color.dart';
 import '../widgets/widget_home.dart';
 import 'class/class_screen.dart';
+import 'news/news_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -32,12 +36,36 @@ class _HomeScreenState extends State<HomeScreen> {
           Navigator.push(context, MaterialPageRoute(builder: (context) => const TeacherScreen()));
         }
       },
-      {"icon": "assets/icons/ic_hs.svg", "name": "Danh sách học sinh", "click": () {}},
-      {"icon": "assets/icons/ic_thuchi.svg", "name": "Quản lý thu chi", "click": () {}},
+      {
+        "icon": "assets/icons/ic_hs.svg",
+        "name": "Danh sách học sinh",
+        "click": () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const StudentScreen()));
+        }
+      },
+      {
+        "icon": "assets/icons/ic_thuchi.svg",
+        "name": "Quản lý thu chi",
+        "click": () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const ExpenditureScreen()));
+        }
+      },
       {"icon": "assets/icons/ic_suatan.svg", "name": "Quản lý xuất ăn", "click": () {}},
       {"icon": "assets/icons/ic_diemdanh.svg", "name": "Quản lý điểm danh", "click": () {}},
-      {"icon": "assets/icons/ic_sukien.svg", "name": "Sự kiện", "click": () {}},
-      {"icon": "assets/icons/ic_tb.svg", "name": "Bảng tin", "click": () {}},
+      {
+        "icon": "assets/icons/ic_sukien.svg",
+        "name": "Sự kiện",
+        "click": () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const EventScreen()));
+        }
+      },
+      {
+        "icon": "assets/icons/ic_tb.svg",
+        "name": "Bảng tin",
+        "click": () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const NewsScreen()));
+        }
+      },
     ];
 
     return Scaffold(
