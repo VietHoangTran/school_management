@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:school_management/src/utils/values.dart';
 import 'package:school_management/src/views/event/event_screen.dart';
 import 'package:school_management/src/views/expenditure/expenditure_screen.dart';
+import 'package:school_management/src/views/servings/servings_screen.dart';
 import 'package:school_management/src/views/student/student_screen.dart';
 import 'package:school_management/src/views/teacher/teacher_screen.dart';
 
@@ -50,7 +51,13 @@ class _HomeScreenState extends State<HomeScreen> {
           Navigator.push(context, MaterialPageRoute(builder: (context) => const ExpenditureScreen()));
         }
       },
-      {"icon": "assets/icons/ic_suatan.svg", "name": "Quản lý xuất ăn", "click": () {}},
+      {
+        "icon": "assets/icons/ic_suatan.svg",
+        "name": "Quản lý xuất ăn",
+        "click": () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const ServingsScreen()));
+        }
+      },
       {"icon": "assets/icons/ic_diemdanh.svg", "name": "Quản lý điểm danh", "click": () {}},
       {
         "icon": "assets/icons/ic_sukien.svg",
