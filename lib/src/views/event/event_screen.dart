@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:school_management/src/utils/styles.dart';
 
-import '../../utils/values.dart';
 import '../../widgets/widget_appbar.dart';
+import '../news/news_screen.dart';
 
 class EventScreen extends StatefulWidget {
   const EventScreen({Key? key}) : super(key: key);
@@ -54,54 +53,6 @@ class _EventScreenState extends State<EventScreen> {
                         index: index,
                       )),
             ),
-          ))
-        ],
-      ),
-    );
-  }
-}
-
-class news_widget extends StatelessWidget {
-  final String image;
-  final String title;
-  final String time;
-  final int index;
-  const news_widget({
-    super.key,
-    required this.image,
-    required this.title,
-    required this.time,
-    required this.index,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(8),
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.green.withOpacity(0.3)),
-      child: Row(
-        children: [
-          Image.asset(
-            image,
-            width: AppValue.widths * 0.25,
-            height: AppValue.heights * 0.09,
-            fit: BoxFit.fill,
-          ),
-          AppValue.hSpaceTiny,
-          Expanded(
-              child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: AppStyle.DEFAULT_16_BOLD,
-              ),
-              Text(
-                time,
-                style: AppStyle.DEFAULT_14,
-              ),
-            ],
           ))
         ],
       ),

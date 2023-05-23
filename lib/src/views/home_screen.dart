@@ -9,6 +9,7 @@ import 'package:school_management/src/views/teacher/teacher_screen.dart';
 
 import '../utils/color.dart';
 import '../widgets/widget_home.dart';
+import 'attendance/attendance_screen.dart';
 import 'class/class_screen.dart';
 import 'news/news_screen.dart';
 
@@ -58,7 +59,13 @@ class _HomeScreenState extends State<HomeScreen> {
           Navigator.push(context, MaterialPageRoute(builder: (context) => const ServingsScreen()));
         }
       },
-      {"icon": "assets/icons/ic_diemdanh.svg", "name": "Quản lý điểm danh", "click": () {}},
+      {
+        "icon": "assets/icons/ic_diemdanh.svg",
+        "name": "Quản lý điểm danh",
+        "click": () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const AttendanceScreen()));
+        }
+      },
       {
         "icon": "assets/icons/ic_sukien.svg",
         "name": "Sự kiện",
